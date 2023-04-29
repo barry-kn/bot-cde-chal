@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import BotCollection from "./Bot";
-import YourBotArmy from "./YourBotArmy";
+import Bot from "./Bot";
+import Bot2 from "./Bot2";
 import "./App.css";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   const [enlistedBots, setEnlistedBots] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8001/bots")
+    fetch("http://localhost:3000/bots")
       .then((response) => response.json())
       .then((data) => setBots(data))
       .catch((error) => console.error(error));
@@ -49,7 +49,7 @@ function App() {
 
   const dischargeBot = (id) => {
     setEnlistedBots(enlistedBots.filter((bot) => bot.id !== id));
-    fetch(`http://localhost:8001/bots/${id}`, { method: "DELETE" })
+    fetch(`http://localhost:3000/bots/${id}`, { method: "DELETE" })
       .then((response) => response.json())
       .then((data) => {
         setBots(bots.filter((bot) => bot.id !== id));
@@ -63,8 +63,8 @@ function App() {
         <h1>Bot Battlr</h1>
       </header>
       <main>
-        <BotCollection bots={bots} enlistBot={enlistBot} />
-        <YourBotArmy
+        <Bot bots={bots} enlistBot={enlistBot} />
+        <Bot2
           enlistedBots={enlistedBots}
           releaseBot={releaseBot}
           dischargeBot={dischargeBot}
