@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BotCollection from "./BotCollection";
+import BotCollection from "./Bot";
 import YourBotArmy from "./YourBotArmy";
 import "./App.css";
 
