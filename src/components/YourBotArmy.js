@@ -1,6 +1,6 @@
 import React from 'react';
 import EachBot from './EachBot';
-import '../App.css';
+ 
 
 function YourBotArmy({ listedBots, setListedBots }) {
   function deleteBot(bot) {

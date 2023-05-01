@@ -1,17 +1,23 @@
-import React from 'react';
-
 function EachBot({ bot, onClick }) {
-  const { name, health, attack, defense, id } = bot;
+  const { id, name, health, damage, armor, bot_class, catchphrase, avatar_url, created_at, updated_at } = bot;
+
+  function handleRemoveClick() {
+    onClick(id);
+  }
 
   return (
     <div className="bot-card">
+      <img src={avatar_url} alt={`${name} avatar`} />
       <h2>{name}</h2>
+      <p>ID: {id}</p>
       <p>Health: {health}</p>
-      <p>Attack: {attack}</p>
-      <p>Defense: {defense}</p>
+      <p>Damage: {damage}</p>
       
-
-      <button onClick={onClick}>REMOVE</button>
+      
+      <p>Catchphrase: {catchphrase}</p>
+      
+      
+      <button onClick={handleRemoveClick}>REMOVE</button>
     </div>
   );
 }

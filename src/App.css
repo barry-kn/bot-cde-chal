@@ -21,10 +21,14 @@ body {
   flex-wrap: wrap;
 }
 
-.col-md-6 {
-  flex-basis: calc(50% - 1rem);
-  margin-right: 1rem;
-  margin-bottom: 2rem;
+.row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col-container {
+  flex: 1;
 }
 
 @media (max-width: 767px) {
