@@ -6,7 +6,7 @@ function BotsCollection({ listedBots, setListedBots }) {
   const [bots, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/bots')
+    fetch('https://my-json-server.typicode.com/QUANDEVV/bots/bots')
       .then((response) => response.json())
       .then((bots) => setData(bots))
       .catch((error) => console.error(error));
