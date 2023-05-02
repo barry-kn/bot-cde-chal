@@ -21,4 +21,4 @@
  
 #### Direct link
  https://bot-cde-chal.vercel.app/
- 
+ plz look at the very bottom of the page when u click remove it add in your bot
